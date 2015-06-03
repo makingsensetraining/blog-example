@@ -1,10 +1,13 @@
-mini-blog-mean
+mini-blog
 ==================
 
-This repository contain a mini-blog made with AngularJS, Express and MongoDB. The purpose of this story is add persistent data in the previous Blog [mini-blog-node](https://github.com/makingsensetraining/mini-blog-node) using MongoDB.
+This repository contain a mini-blog made with AngularJS, Express and MongoDB.
 
 #### To run this example: 
 1. `npm install`
-2. `node web-server.js`
+1. `bower install`
+2. `node server.js`
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 

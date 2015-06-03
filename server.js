@@ -1,8 +1,8 @@
-var express = require("express"),
-    app = express()
-var _ = require("underscore");
-var mongoose = require('mongoose');
+var express = require('express');
 var uuid = require('uuid');
+var bodyParser = require('body-parser');
+var mongoose   = require('mongoose');
+var app = express();
 
 
 var postSchema = new mongoose.Schema({
@@ -18,10 +18,9 @@ var postSchema = new mongoose.Schema({
 
 var posts = mongoose.model('singlePost', postSchema);
 
-app.configure(function () {
-    app.use(express.bodyParser());
-    app.use(express.static(__dirname + '/app'));
-});
+app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // _____________________________________________________________________________________________________
 
@@ -82,7 +81,7 @@ app.delete('/delete/:id', function (req, res) {
 // _____________________________________________________________________________________________________ 
 
 // Mongoose connection to MongoDB
-mongoose.connect('mongodb://localhost/test', function (error) {
+mongoose.connect('mongodb://blog:1qaz2wsx@ds043082.mongolab.com:43082/blog', function (error) {
     if (error)return console.log(error);
 
     var server = app.listen(process.env.PORT || 3000, function () {

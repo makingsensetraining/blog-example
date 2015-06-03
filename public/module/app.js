@@ -9,31 +9,26 @@ app.config(['$routeProvider', function($routeProvider) {
         .when('/', 
             {
             controller: 'myPostsCtrl',
-            templateUrl: '../views/myPosts.html'
-            })
-        .when('/posts', 
-            {
-            controller: 'myPostsCtrl',
-            templateUrl: '../views/myPosts.html'
+            templateUrl: 'module/views/myPosts.html'
             })
         .when('/addpost',
             {
             controller: 'newPostCtrl',
-            templateUrl: '../views/newPost.html' })
+            templateUrl: 'module/views/newPost.html' })
         .when('/toaster',
             {
             controller: 'toasterCtrl',
-            templateUrl: '../views/toaster.html' })
+            templateUrl: 'module/views/toaster.html' })
     
         .when('/posts/:postId', 
             {
             controller: 'postDetailsCtrl',
-            templateUrl: '../views/postDetails.html'
+            templateUrl: 'module/views/postDetails.html'
             })    
         .when('/edit/:postId', 
             {
             controller: 'editPostCtrl',
-            templateUrl: '../views/editPost.html'
+            templateUrl: 'module/views/editPost.html'
             })    
         .otherwise({redirectTo: '/'});
 }]);

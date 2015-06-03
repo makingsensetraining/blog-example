@@ -6,6 +6,7 @@
     "angular": "v1.3.x",
     "angular-route": "v1.3.x",
     "angular-animate": "v1.3.x",
-    "underscore": "*"
+    "underscore": "*",
+    "angularjs-toaster": "*"
   }
 }
