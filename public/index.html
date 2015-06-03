@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>mini-blog-mean</title>
+  <link rel="stylesheet" href="assets/css/custom.css"/>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/toaster.css"/>
+</head>
+<body class="height100">
+    <!-- navigation bar --> 
+    <nav class="navbar navbar-default navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">mini-blog-mean</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+            <ul class="nav navbar-nav menu">
+                <a href="#/addpost" type="button" class="btn btn-primary btn-Post" ng-click="unmarkAll()"> Write new post </a>    
+            </ul>            
+
+        </div>
+    </nav><!-- navigation bar -->
+
+    <!-- container -->
+    <div id="centerContent" class="centerContent">
+    <!-- left side -->
+        <div class="col-xs-6 col-md-4">
+            <toaster-container toaster-options="{'position-class': 'toast-bottom-left', 'time-out': 3000}"></toaster-container>
+        </div>    
+
+        <div ng-view></div>
+    </div> <!-- container -->
+    
+    <!-- scripts -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="lib/angular/angular-animate.js"></script>
+
+    <script type="text/javascript" src="lib/underscore-min.js"></script>
+    <script type="text/javascript" src="lib/toaster.js"></script>
+
+    <script src="module/app.js"></script>
+    <script src="module/services/services.js"></script>
+    <script src="module/controllers/myPostsCtrl.js"></script>
+    <script src="module/controllers/postDetailsCtrl.js"></script>
+    <script src="module/controllers/newPostCtrl.js"></script>
+    <script src="module/controllers/editPostCtrl.js"></script>
+</body>
+</html>
