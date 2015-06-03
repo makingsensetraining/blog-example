@@ -2,7 +2,7 @@
   "name": "angularjs-mini-blog",
   "description": "A starter project for AngularJS",
   "repository": "https://github.com/makingsensetraining/blog-example",
-  "devDependencies": {
+  "dependencies": {
     "body-parser": "*",
     "bower": "*",
     "express": "*",
