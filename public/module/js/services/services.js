@@ -1,12 +1,11 @@
-'use strict';
-
 /* Services */
 app.service('blogService', function ($http, $location) {
-
+        'use strict';
+    
         //return the array
         this.getAll = function () {
            return $http.get('/api/myPosts');
-        }
+        };
        
         //search by id in the current array
         this.getById = function (blogItemId) {  

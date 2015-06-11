@@ -1,6 +1,6 @@
-'use strict';
-
 app.controller('postDetailsCtrl', function($scope, $routeParams, blogService, $location, toaster) {
+    'use strict';
+    
     //Call to getById() method in blogService
     blogService.getById($routeParams.postId)
         .success(function (current, status, headers, config) {
@@ -20,5 +20,5 @@ app.controller('postDetailsCtrl', function($scope, $routeParams, blogService, $l
             .error(function(current, status, headers, config) {
                 toaster.pop('error', current);
             });
-    }
+    };
 });

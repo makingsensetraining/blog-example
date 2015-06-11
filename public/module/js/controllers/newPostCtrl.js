@@ -1,6 +1,6 @@
-'use strict';
-
 app.controller('newPostCtrl', function($scope, blogService, $location, toaster) {
+    'use strict';
+    
     // Call to blogService.create()
     $scope.addPost = function() {
         var postData = {
