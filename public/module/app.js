@@ -1,10 +1,9 @@
-'use strict';
-
-
 // Declare app level module which depends on filters, and services
 var app = angular.module('myApp', [ 'ngRoute', 'toaster' ]);
 
 app.config(['$routeProvider', function($routeProvider) {
+    'use strict';
+
     $routeProvider    
         .when('/', 
             {
@@ -19,7 +18,7 @@ app.config(['$routeProvider', function($routeProvider) {
             {
             controller: 'toasterCtrl',
             templateUrl: 'module/views/toaster.html' })
-    
+
         .when('/posts/:postId', 
             {
             controller: 'postDetailsCtrl',
@@ -32,6 +31,3 @@ app.config(['$routeProvider', function($routeProvider) {
             })    
         .otherwise({redirectTo: '/'});
 }]);
-
-
-
