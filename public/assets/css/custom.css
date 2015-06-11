@@ -1,3 +1,18 @@
+
+.htmlCustom {
+    background: url(../img/desk-blur.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bodyCustom {
+    background-color: transparent!important;
+    box-shadow: none;
+}
+
+
 body {
     background-color: #ffffff !important;
     color: #333333;
@@ -79,6 +94,9 @@ div.deleteAlert {margin-top: 4%;}
     height: 100%;
 }
 
+.loginForm {
+    width: 85%;
+}
 
 
 
