@@ -9,13 +9,14 @@
 </head>
 <body ng-class="{height100: isLogged, bodyCustom: !isLogged}">
     <!-- navigation bar --> 
-    <nav class="navbar navbar-default navbar-inverse" role="navigation" ng-show="isLogged">
+    <nav class="navbar navbar-default navbar-inverse" role="navigation" ng-show="isLogged" ng-controller="LoginCtrl">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">mini-blog-mean</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
             <ul class="nav navbar-nav menu">
-                <a href="#/addpost" type="button" class="btn btn-primary btn-Post" ng-click="unmarkAll()"> Write new post </a>    
+                <a href="#/addpost" type="button" class="btn btn-primary btn-Post"> Write new post </a>
+                <button ng-click="logout()" type="button" class="btn btn-danger btn-Post"> Logout </button>
             </ul>
 
         </div>
