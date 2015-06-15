@@ -27,4 +27,12 @@ app.service('blogService', function ($http, $location) {
             return $http.delete('/delete/'+blogItemId);
             
         };
+
+
+        this.login = function (user) {
+            return $http.post('/login',user);
+        };
+        this.logout = function () {
+            return $http.post('/logout',{});
+        };
 }); 

@@ -6,7 +6,7 @@ app.controller('myPostsCtrl', function($scope, blogService, toaster) {
         .success(function (posts, status, headers, config) {
             $scope.posts = posts;
         })
-        .error(function(data, status, headers, config) {
+        .error(function(current, status, headers, config) {
             toaster.pop('error', current);
         });
 });

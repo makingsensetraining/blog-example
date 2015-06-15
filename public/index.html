@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="myApp" ng-class="{htmlCustom: !isLogged}">
 <head>
   <meta charset="utf-8">
   <title>mini-blog-mean</title>
@@ -7,15 +7,17 @@
   <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="lib/angularjs-toaster/toaster.css"/>
 </head>
-<body class="height100">
+<body ng-class="{height100: isLogged, bodyCustom: !isLogged}">
     <!-- navigation bar --> 
-    <nav class="navbar navbar-default navbar-inverse" role="navigation">
+     <!-- TODO: decouple login controller from navigation controller--> 
+    <nav class="navbar navbar-default navbar-inverse" role="navigation" ng-show="isLogged" ng-controller="LoginCtrl">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">mini-blog-mean</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
             <ul class="nav navbar-nav menu">
-                <a href="#/addpost" type="button" class="btn btn-primary btn-Post" ng-click="unmarkAll()"> Write new post </a>    
+                <a href="#/addpost" type="button" class="btn btn-primary btn-Post"> Write new post </a>
+                <button ng-click="logout()" type="button" class="btn btn-danger btn-Post"> Logout </button>
             </ul>
 
         </div>
@@ -45,5 +47,7 @@
     <script src="module/js/controllers/postDetailsCtrl.js"></script>
     <script src="module/js/controllers/newPostCtrl.js"></script>
     <script src="module/js/controllers/editPostCtrl.js"></script>
+
+    <script src="module/js/controllers/loginCtrl.js"></script>
 </body>
 </html>
