@@ -9,6 +9,7 @@
 </head>
 <body ng-class="{height100: isLogged, bodyCustom: !isLogged}">
     <!-- navigation bar --> 
+     <!-- TODO: decouple login controller from navigation controller--> 
     <nav class="navbar navbar-default navbar-inverse" role="navigation" ng-show="isLogged" ng-controller="LoginCtrl">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">mini-blog-mean</a>
