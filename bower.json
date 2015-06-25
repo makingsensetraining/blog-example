@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "angular": "v1.3.x",
-    "angular-route": "v1.3.x",
-    "angular-animate": "v1.3.x",
+    "angular": "v1.3.16",
+    "angular-route": "v1.3.16",
+    "angular-mocks": "v1.3.16",
+    "angular-animate": "v1.3.16",
     "underscore": "*",
     "angularjs-toaster": "*"
   }

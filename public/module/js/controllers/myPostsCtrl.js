@@ -1,8 +1,8 @@
 app.controller('myPostsCtrl', function($scope, blogService, toaster) {
     'use strict';
-    
+
     //get all elements
-    $scope.myPosts = blogService.getAll()
+    blogService.getAll()
         .success(function (posts, status, headers, config) {
             $scope.posts = posts;
         })

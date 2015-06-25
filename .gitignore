@@ -28,3 +28,4 @@ node_modules
 
 #webstorm files
 .idea
+public/lib
