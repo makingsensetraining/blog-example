@@ -5,6 +5,7 @@ var session = require('express-session');
 var mongoose   = require('mongoose');
 var app = express();
 
+
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
@@ -63,7 +64,6 @@ app.use(passport.session());    // Add passport initialization
 app.get("/", function (req, res) {
     res.redirect("/index.html");
 });
-
 
 // get all posts
 app.get('/api/myPosts', auth, function (req, res) {

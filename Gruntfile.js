@@ -14,21 +14,25 @@ module.exports = function(grunt) {
             tasks: ['jshint']
         },
         karma:{
-        unit:{
-            configFile: 'test/karma.conf.js',
-                singleRun: true
+            unit:{
+                configFile: 'tests/frontEnd/karma.conf.js'
+            }
+        },
+        simplemocha: {
+            all: { src: ['tests/backend/**/*.js'] }
         }
-    }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-simple-mocha');
     
     grunt.registerTask('default', ['watch']);
 
     grunt.registerTask('test', [
         'jshint',
-        'karma'
+        'karma',
+        'simplemocha'
     ]);
 };

@@ -4,7 +4,7 @@
 module.exports = function(config) {
   config.set({
     // base path, that will be used to resolve files and exclude
-    basePath: '../',
+    basePath: '../../',
 
     // testing framework to use (jasmine/mocha/qunit/...)
     frameworks: ['jasmine'],
@@ -16,9 +16,9 @@ module.exports = function(config) {
       'public/lib/angular-animate/angular-animate.js',
       'public/lib/angularjs-toaster/toaster.js',
       'public/lib/angular-route/angular-route.js',
-      'test/app-test.js',
+      'tests/frontEnd/app-test.js',
       'public/module/**/**/*.js',
-      'test/spec/**/*.js'
+      'tests/frontEnd/spec/**/*.js'
     ],
 
     // list of files / patterns to exclude
@@ -48,6 +48,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false
+    singleRun: true
   });
 };
